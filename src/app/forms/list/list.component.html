@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br><br><br>
+      <h4>Lista de de items</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let purchase of purchases; let i = index"
+           [class.active]="i == currentIndex"
+           (click)="setActiveBuy(purchase, i)"
+        >
+        {{ purchase.nombre_completo }}
+        </li>
+      </ul>
+
+      <a  href="empresa-create" class="nav-link" routerLink="create">
+        <button class="m-3 btn btn-sm btn-primary" >
+          Adicionar
+        </button>
+      </a>
+
+    </div>
+
+    <div class="col-md-6">
+      <br><br><br>
+      <div *ngIf="currentEmpresa">
+        <h4>Empresa</h4>
+        <div>
+          <label><strong>id: </strong></label>
+          {{ currentEmpresa.id }}
+        </div>
+        <div>
+          <label><strong>tipo_documento: </strong></label>
+          {{ currentEmpresa.tipo_documento }}
+        </div>
+        <div>
+          <label><strong>numero_documento:</strong></label>
+           {{ currentEmpresa.numero_documento }}
+        </div>
+        <div>
+          <label><strong>nombre_completo:</strong></label>
+          {{ currentEmpresa.nombre_completo }}
+        </div>
+        <div>
+          <label><strong>pais:</strong></label>
+          {{ currentEmpresa.pais }}
+        </div>
+        <div>
+          <label><strong>telefono:</strong></label>
+          {{ currentEmpresa.telefono }}
+        </div>
+
+        <a  routerLink="EmpresaUpdate/{{currentEmpresa.id}}">
+          <button class=" btn btn-sm btn-primary" >
+           Editar
+          </button>
+        </a>
+        <br>
+        <br>
+
+        <button class=" btn btn-sm btn-danger"  (click)="deleteItem( currentEmpresa.id )" >
+          Eliminar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

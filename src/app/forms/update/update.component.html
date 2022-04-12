@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="tipo_documento">Tipo documento</label>
+        <select
+          class="form-control"
+          id="tipo_documento"
+          required
+          [(ngModel)]="empresa.tipo_documento"
+          name="tipo_documento">
+          <option value="CC" selected>Cedula Ciudadania</option>
+          <option value="NIT">NIT</option>
+          <option value="pasaporte">Pasaporte</option>
+          <option value="CE">Cedula Extranjera</option>
+          <option value="TI">Tarjeta de identificacion</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nombre_completo">nombre_completo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre_completo"
+          required
+          [(ngModel)]="empresa.nombre_completo"
+          name="nombre_completo"
+        />
+      </div>
+      <div class="form-group">
+        <label for="departamento">departamento</label>
+        <input
+          type="text"
+          class="form-control"
+          id="departamento"
+          required
+          [(ngModel)]="empresa.departamento"
+          name="departamento"
+        />
+      </div>
+      <div class="form-group">
+        <label for="telefono">telefono</label>
+        <input
+          type="text"
+          class="form-control"
+          id="telefono"
+          required
+          [(ngModel)]="empresa.telefono"
+          name="telefono"
+        />
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="numero_documento">Numero documento</label>
+        <input
+          type="text"
+          class="form-control"
+          id="numero_documento"
+          required
+          [(ngModel)]="empresa.numero_documento"
+          name="numero_documento"
+        />
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input
+          type="text"
+          class="form-control"
+          id="direccion"
+          required
+          [(ngModel)]="empresa.direccion"
+          name="direccion"
+        />
+      </div>
+      <div class="form-group">
+        <label for="pais">Pais</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pais"
+          required
+          [(ngModel)]="empresa.pais"
+          name="pais"
+        />
+      </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="col-lg-12">
+      <div class="form-group">
+        <button (click)="updateBuy()" class="btn btn-success">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
